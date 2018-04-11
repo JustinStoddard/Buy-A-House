@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     get 'properties', to: 'properties#index'
     get 'cities/:city', to: 'properties#index'
+    resources :agents, only: [:index]
   end
 
   #Do not place any routes below this one

@@ -11,6 +11,7 @@ import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
 import Cities from './Cities';
+import FindHome from './FindHome';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
         <Flash />
         <FetchUser>
           <Switch>
+            <Route exact path='/findhome' component={FindHome} />
             <Route exact path='/cities' component={Cities} />
             <Route eaxct path='/available' component={Available} />
             <Route exact path='/' component={Home} />
